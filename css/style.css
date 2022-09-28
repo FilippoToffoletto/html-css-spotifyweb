@@ -102,16 +102,12 @@ main{
 .card{
     width: calc(100vw / 6);
     margin: 5px;
-    /* display: block; */
 }
 
 .cover{
     
     /* DEBUG */
     background-color: rgba(227, 75, 75, 0.867);
-}
-.name{
-  
 }
 
 
