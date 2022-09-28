@@ -17,6 +17,35 @@ body{
 
 /* UTILITY */
 
+.d-flex{
+    display: flex;
+}
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+.justify-left{
+    display: flex;
+    justify-content: left;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+ul{
+    list-style: none;
+}
+.first-up{
+    text-transform: capitalize;
+}
+
+
 
 /* SIDEBAR */
 
@@ -37,6 +66,21 @@ header{
     background-color: #070B12;
     width: calc(100vw - 160px);
     transform: translate(160px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .btn{
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-right: 25px;
+}
+header .btn a{
+    padding: 10px 35px;
+    font-size: .7rem;
 }
 
 /* MAIN */
@@ -46,8 +90,29 @@ main{
     width: calc(100vw - 160px);
     transform: translate(160px);
     background-color: #141922;
+    overflow: auto;
+}
+.title{
+    padding: 10px 20px;
 }
 
+.row{
+    padding: 20px 20px;
+}
+.card{
+    width: calc(100vw / 6);
+    margin: 5px;
+    /* display: block; */
+}
+
+.cover{
+    
+    /* DEBUG */
+    background-color: rgba(227, 75, 75, 0.867);
+}
+.name{
+  
+}
 
 
 /* FOOTER */
@@ -67,6 +132,25 @@ footer{
 /* *********** RESPONSIVE ********* */ 
 /* ******************************** */ 
 /* ******************************** */ 
+
+@media (max-width:878px){
+    .row{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width:640px){
+    .row{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card{
+        width: calc(100vw / 3.2);
+    }
+}
+
 
 @media (max-width:400px){
     .sidebar{
