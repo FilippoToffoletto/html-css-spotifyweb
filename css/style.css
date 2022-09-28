@@ -1,9 +1,83 @@
+/* GENERALS */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+img{
+    width: 100%;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* UTILITY */
+
+
+/* SIDEBAR */
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    z-index: 900;
+    width: 160px;
+    height: calc(100vh - 65px);
+}
+
+/* HEADER */
+
+header{
+    height: 65px;
+    background-color: #070B12;
+    width: calc(100vw - 160px);
+    transform: translate(160px);
+}
+
+/* MAIN */
+
+main{
+    height: calc(100vh - 130px);
+    width: calc(100vw - 160px);
+    transform: translate(160px);
+    background-color: #141922;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    display: fixed;
+    z-index: 999;
+    height: 65px;
+    background-color: #282828;
+}
+
+
+
+
+/* ******************************** */ 
+/* ******************************** */ 
+/* *********** RESPONSIVE ********* */ 
+/* ******************************** */ 
+/* ******************************** */ 
+
+@media (max-width:400px){
+    .sidebar{
+        width:20px;
+    }
+    header{
+        width: calc(100vw - 20px);
+        transform: translatex(20px);
+    }
+    main{
+        width: calc(100vw - 20px);
+        transform: translatex(20px);
+    }
 }
