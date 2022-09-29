@@ -13,6 +13,7 @@ img{
 body{
     font-family: 'Montserrat', sans-serif;
     color: white;
+    font-size: 100%;
 }
 
 /* UTILITY */
@@ -52,6 +53,12 @@ ul{
 .first-up{
     text-transform: capitalize;
 }
+.uppercase{
+    text-transform: uppercase;
+}
+.relative{
+    position: relative;
+}
 
 
 
@@ -61,10 +68,11 @@ ul{
     position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: black;
-    z-index: 900;
+    z-index: 2;
     width: 20vw;
-    height: calc(100vh - 10vh);
+    height: 100vh;
 }
 .sidebar .container-sidebar{
     padding: 0px 15px;
@@ -82,7 +90,7 @@ ul{
 .menu-left nav{
     font-size: .8rem;
     color: #7D7F83;
-    line-height: 23px;
+    line-height: 2em;
 }
 
 .main-menu{
@@ -95,9 +103,70 @@ ul{
     padding-right: 3px;
     fill: #7D7F83;
 }
+.menu-left i{
+    display: inline-block;
+    font-size: 1.5em;
+    padding-right: 5px;
+    vertical-align: text-bottom;
+}
 .main-menu ul li:hover svg{
     fill: white;
 }
+.menu-left a:hover{
+    color: white;
+}
+
+.menu-left h3{
+    font-size: .9em;
+    padding: 10px 0px;
+}
+.menu-left h4{
+    color: #7D7F83;
+}
+
+
+.playlist-menu ul li{
+    line-height: 30px;
+}
+
+.sidebar-bottom{
+    position: fixed;
+    background-color: black;
+    padding: 5px 0px;
+    bottom: 11%;
+    left: 15px;
+}
+.sidebar-bottom .line-bottom{
+    border-bottom: 1px solid #7D7F83;
+    padding: 2px 0px;
+    width: 15vw;
+}
+.sidebar-bottom .profile{
+    padding-top: 5px;
+}
+.sidebar-bottom .profile a{
+    color: white;
+    font-weight: 600;
+}
+.sidebar-bottom span{
+    font-size: .6em;
+}
+.sidebar-bottom svg{
+    fill: #7D7F83;
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.sidebar-bottom .profile a svg{
+    height: 20px;
+    width: 20px;
+    background-color: #7D7F83;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 
 /* HEADER */
 
@@ -133,12 +202,12 @@ header .btn:hover{
 /* MAIN */
 
 main{
-    height: calc(100vh - 60px);
+    height: 90vh;
     width: 80vw;
     transform: translate(20vw);
     background-color: #141922;
     overflow: auto;
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 
 .row{
@@ -152,7 +221,6 @@ main{
 .cover{
     
     /* DEBUG */
-    background-color: rgba(227, 75, 75, 0.867);
 }
 
 .menu-central ul li{
@@ -219,6 +287,9 @@ footer{
 /* ******************************** */ 
 
 @media (max-width:878px){
+    body, a{
+        font-size: 90%;
+    }
     .row{
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -226,13 +297,14 @@ footer{
     .menu-central ul{
         flex-wrap: wrap;
     }
-    /* .siderbar{
-        width: 165px;
-    } */
+    
 }
 
 
 @media (max-width:640px){
+    body, a{
+        font-size: 80%;
+    }
     .row{
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -244,6 +316,9 @@ footer{
 
 
 @media (max-width:400px){
+    body, a{
+        font-size: 60%;
+    }
     .sidebar{
         width:20px;
     }
