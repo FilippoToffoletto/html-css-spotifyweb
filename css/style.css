@@ -35,9 +35,13 @@ body{
 
 a{
     text-decoration: none;
-    color: white;
+    color: #7D7F83;
     text-transform: uppercase;
 }
+a:hover{
+    color: white;
+}
+
 ul{
     list-style: none;
 }
@@ -63,41 +67,46 @@ ul{
 
 header{
     height: 65px;
-    background-color: #070B12;
+    background-color: #070b12a9;
     width: calc(100vw - 160px);
     transform: translate(160px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    z-index: 899;
 }
 
 header .btn{
     display: flex;
     justify-content: center;
-    border: 1px solid white;
+    border: 1px solid #7D7F83;
     border-radius: 20px;
     margin-right: 25px;
 }
 header .btn a{
     padding: 10px 35px;
     font-size: .7rem;
+    color: white;
+}
+header .btn:hover{
+    transform: scale(1.04);
+    border-color: white;
 }
 
 /* MAIN */
 
 main{
-    height: calc(100vh - 130px);
+    height: calc(100vh - 60px);
     width: calc(100vw - 160px);
     transform: translate(160px);
     background-color: #141922;
     overflow: auto;
-}
-.title{
-    padding: 10px 20px;
+    padding-top: 65px;
 }
 
 .row{
-    padding: 20px 20px;
+    padding: 0px 20px;
 }
 .card{
     width: calc(100vw / 6);
@@ -109,6 +118,49 @@ main{
     /* DEBUG */
     background-color: rgba(227, 75, 75, 0.867);
 }
+
+.menu-central ul li{
+    padding: 2px 5px;
+    padding-top: 13px;
+}
+.menu-central ul li a{
+    font-size: .8rem;
+    position: relative;
+}
+
+
+.menu-central ul li .bottom-green:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    display: block;
+    height: 2px;
+    background-color: #ADFF2E;
+    bottom: -3px;
+    left: calc(50% - 15px);
+}
+
+.title h2{
+    padding: 15px 20px;
+    font-weight: 800;
+}
+
+/* BOX ALBUM */
+
+.cover .name{
+    padding: 10px 0px;
+    line-height: 20px;
+}
+.cover .name h4{
+    font-weight: 600em;
+    font-size: .9rem;
+}
+.cover .name span{
+    font-weight: 300;
+    color: #7D7F83;
+    font-size: .8rem;
+}
+
 
 
 /* FOOTER */
@@ -134,6 +186,9 @@ footer{
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+    .menu-central ul{
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -143,7 +198,7 @@ footer{
         justify-content: flex-start;
     }
     .card{
-        width: calc(100vw / 3.2);
+        width: calc(100vw / 3.7);
     }
 }
 
@@ -158,6 +213,6 @@ footer{
     }
     main{
         width: calc(100vw - 20px);
-        transform: translatex(20px);
+        transform: translate(20px);
     }
 }
