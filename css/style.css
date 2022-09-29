@@ -64,7 +64,7 @@ ul{
     background-color: black;
     z-index: 900;
     width: 20vw;
-    height: calc(100vh - 20vh);
+    height: calc(100vh - 10vh);
 }
 .sidebar .container-sidebar{
     padding: 0px 15px;
@@ -73,30 +73,29 @@ ul{
     display: flex;
     margin: 0 auto;
     padding: 12px 0px;
-    padding-top: 12px;
-    padding-right: 10px;
 }
-.container-sidebar .logo img{
-    /* padding: 0px 10px; */
+.container-sidebar .logo svg{
+    max-width: 130px;
 }
 
-.menu-left{
-    margin-top: 8px;
-}
+
 .menu-left nav{
     font-size: .8rem;
     color: #7D7F83;
-    line-height: 20px;
+    line-height: 23px;
 }
 
-.menu svg{
+.main-menu{
+    padding: 10px 0px;
+}
+.main-menu svg{
     display: inline-block;
     height: 20px;
     width: 20px;
     padding-right: 3px;
     fill: #7D7F83;
 }
-.menu ul li:hover svg{
+.main-menu ul li:hover svg{
     fill: white;
 }
 
@@ -139,7 +138,7 @@ main{
     transform: translate(20vw);
     background-color: #141922;
     overflow: auto;
-    padding-top: 20vh;
+    padding-top: 15vh;
 }
 
 .row{
@@ -204,8 +203,9 @@ main{
 
 footer{
     display: fixed;
+    position: relative;
     z-index: 999;
-    height: 20vh;
+    height: 13vh;
     background-color: #282828;
 }
 
