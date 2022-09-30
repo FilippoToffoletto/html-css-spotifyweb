@@ -88,6 +88,8 @@ ul{
 .sidebar .container-sidebar{
     padding: 0px 15px;
 }
+
+
 .container-sidebar .logo{
     display: flex;
     margin: 0 auto;
@@ -129,6 +131,22 @@ ul{
 .menu-left a:hover{
     color: white;
 }
+
+nav.main-menu.border-green ul li{
+    margin-left:-14px;
+
+}
+nav.main-menu.border-green ul li a{
+    padding-left: 10px;
+}
+nav.main-menu.border-green ul li:hover{
+    border-left:1px solid #ADFF2E;
+}
+
+/* .menu-left .border-green ul li:hover{
+    border-left: 1px solid #ADFF2E;
+
+} */
 
 .menu-left h3{
     font-size: .9em;
@@ -238,9 +256,23 @@ main{
     margin: 5px;
 }
 
-.cover{
-    
-    /* DEBUG */
+.cover-hover{
+    position: relative;
+    opacity: 1;
+    transition: .3s;
+}
+.cover-hover img:hover{
+    opacity: .4;
+}
+.cover-hover:hover .fa-solid{
+    opacity: 1;
+}
+ .cover-hover i{
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    font-size: 2rem;
+    opacity: 0;
 }
 
 .menu-central ul li{
@@ -268,6 +300,15 @@ main{
     padding: 15px 20px;
     font-weight: 800;
 }
+.title span{
+    padding: 0px 20px;
+    color: #7D7F83;
+    font-size: .8rem;
+}
+
+.circled img{
+    border-radius: 50%;
+}
 
 /* BOX ALBUM */
 
@@ -284,6 +325,7 @@ main{
     color: #7D7F83;
     font-size: .8rem;
 }
+
 
 
 
@@ -368,18 +410,21 @@ footer .footer-left .cover {
     width: 100%;
     cursor: pointer;
     height: .3rem;
+    border-radius: 20px;
+
 }
 .song-bar{
-    width: 30%;
+    width: 90px;
     background-color: #C1C1C1;
     height: .3rem;
+    border-radius: 20px;
 }
 .song-head{
     height: 1rem;
     width: 1rem;
     background-color: white;
     border-radius: 50%;
-    transform: translate(300%, -30%);
+    transform: translate(80px, -30%);
     display: none;
 }
 .song:hover .song-bar{
@@ -484,12 +529,11 @@ footer .footer-left .cover {
     .sidebar{
         width: 10%;
     }
-
-    .spotify-logo--text span,
+    .spotify-logo--text, span,
     h3, h4, .line-bottom {
         display: none;
     }
-    .spotify-logo{
+    .spotify-logo{  
         display: block;
     }
     .siderbar-bottom{
